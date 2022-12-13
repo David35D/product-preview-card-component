@@ -78,6 +78,14 @@ body {
   max-width: 600px;
 }
 
+@media (min-width: 600px) {
+  .product {
+    display: flex;
+    align-items: center;
+    --content-padding: 2rem;
+  }
+}
+
 .product__content {
   gap: var(--content-spacing);
   padding: var(--content-padding);
@@ -139,9 +147,29 @@ body {
 .button:focus {
   background-color: var(--clr-darker-cyan);
 }
-footer {
-  margin-top: 16px;
+
+
+
+.attribution { 
+  font-size: 1rem; 
+  text-align: center;
 }
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+@media (min-width: 600px) {
+  .attribution {
+    position: relative;
+    top: 48px; 
+  }
+}
+
+.attribution a { 
+  text-decoration: none;
+  color: var(--clr-dark-cyan); 
+  transition: all 0.2s ease;
+}
+
+.attribution a:hover,
+.attribution a:active,
+.attribution a:focus {
+  color: var(--clr-darker-cyan);
+}
